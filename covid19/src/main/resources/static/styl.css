@@ -1,0 +1,176 @@
+<style>
+
+*{box-sizing: border-box;padding: 0%;margin: 0%;}
+body{
+position:relative;
+}
+.containe{
+	overflow: hidden;
+}
+html{
+ scroll-behavior: smooth;
+ }
+
+.containe search{
+float : left;
+ text-align: left;
+ }
+.containe input[type=text]{
+  height: 13%;
+  width: 55%;
+  padding: 15px;
+  font-family: Times New Roman;
+  margin-left:2%;
+  margin-top:2.5%;
+  font-size:3vw;
+  text-align: left;
+  border: 3px solid black;
+  float: left;
+}
+.containe input[type=text]:focus{
+	outline: 3px solid blue;
+}
+.containe .logo{
+  position: relative;
+  width: 16%;
+  height: 20%;
+  color: white; 
+  margin-top: 0.6%;
+  margin-left: 0.7%;
+  float: left;
+  text-align: center;
+}
+.containe .logo img{width:100%; height: 100%;}
+.containe .heading1{ position: absolute; color: white; top:30%; left:25%;font-family: Time New Roman;font-size: 2vw;}
+.containe .heading2{ position: absolute; color: white; top:50%; left:15%;font-family: Time New Roman;font-size: 2vw;}
+
+ .containe i{
+  display: inline; 
+  float: right;
+  font-size:2.5vw;
+  margin: 3% 0.6%;
+  padding:1% 0.8%;
+  color: black;
+  cursor: pointer;
+  }
+  .containe i:hover{
+  color: blue;
+  }
+   
+.place{font-family: Arial;margin-left: 2.2%;font-size: 3vw;font-weight: bold;}
+.p{font-family: Times New Roman;padding: 0% 0.1%; font-size: 1vw; display: block;}
+.map img{
+ width: 50%;
+ height: 90%;
+ margin-top: 2%;
+}
+.map img[usemap] {
+		border: none;
+		width: 50%;
+ 		height: 90%;
+		max-width: 100%;
+	}
+.msg p{font-family: Times New Roman; font-size: 1.7vw; float: left; overflow: hidden; display: block;}
+
+.tooltip {
+  position: relative;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  position: fixed;
+  display: block;
+  opacity: 0;
+  width: 20%;
+  height: auto;
+  background-color: white;
+  background: #EFEFF0;
+  color: black;
+  text-align: center;
+  border-radius: 6px;
+  box-shadow: 0 8px 10px rgba(0,0,0,.1);
+}
+
+.tooltip:hover .tooltiptext {
+  opacity: 1;
+  font-size: 1.6vw;
+  visibility: visible;
+}
+.coun{font-weight: bold; font-family: Times New Roman;font-size: 1.8vw;color: blue;margin: 2%;}
+.atcase{margin-left: 10%;float: left;color: #FF0000;font-weight: bold;}
+.tolcase{margin-left: 10%;float: left;color: #FF00E0;font-weight: bold;}
+.detcase{margin-left: 10%;float: left;color: orange;font-weight: bold;}
+.rcvcase{margin-left: 10%;float: left;color: #0DD100;font-weight: bold;}
+.pop{margin:0px; padding:0px; font-family:Helvetica, Arial, sans-serif;}
+.pop input[type=text], input[type=password] {
+    width: 90%;
+    padding: 12px 20px;
+    margin: 8px 26px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+	font-size:16px;
+}
+.pop button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 26px;
+    border: none;
+    cursor: pointer;
+    width: 90%;
+	font-size:20px;
+}
+.pop button:hover {
+    opacity: 0.8;
+}
+
+.pop .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+.pop .avatar {
+    width: 200px;
+	height:200px;
+    border-radius: 50%;
+}
+.pop .modal {
+	display:none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.pop .modal-content {
+    background-color: #fefefe;
+    margin: 4% auto 15% auto;
+    border: 1px solid #888;
+    width: 40%; 
+	padding-bottom: 30px;
+}
+.pop .close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+.pop .close:hover,.close:focus {
+    color: red;
+    cursor: pointer;
+}
+.pop .animate {
+    animation: zoom 0.6s
+}
+@keyframes zoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+</style>

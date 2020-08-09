@@ -1,0 +1,432 @@
+<DOCTYPE html>
+<html>
+<title>COVID-19 DASHBOARD</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.3.1/css/flag-icon.min.css" rel="stylesheet"/>
+
+<script src="../../js/ios-orientationchange-fix.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="tnstyle.css">
+
+
+<body>
+	<a class="place" style="text-decoration:none;color:black;" href="http://localhost:8080/home#">&#127470&#127475 INDIA <span style="font-size: 3vw">></span></a>
+    <h1 style="font-size: 3vw;color:blue;margin-left: 20px;font-weight:bold">TAMIL NADU</h1>
+
+
+<div>
+	<div class="map" style="display:flex;justify-content:center;align-items:center">
+		<img src="tamilnadu-map.jpg" frameborder="0" usemap="#tn"></div>
+</div><br>
+
+<map name="tn" style="cursor:pointer">
+  	<!--Tiruvallur-->
+	<div class="tooltip">
+		<area shape="poly" coords="518,20,512,29,505,35,491,41,485,49,475,45,467,43,459,40,456,48,450,56,446,64,452,67,460,63,472,60,476,56,487,62,489,71,496,77,502,78,509,75,517,73,525,72,526,57,534,55,540,49,540,41,539,33,529,29">
+		<div id="tiruvallur" class="tooltiptext container">
+			<span class="coun" >Tiruvallur</span><br>
+			<span id="trltntol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="trltndh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="trltnac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="trltnrc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+	
+	<!--Chennai-->
+	<div class="tooltip">
+		<area shape="poly" coords="537,59,531,58,526,64,528,73,537,72,539,66">
+		<div id="chennai" class="tooltiptext container">
+			<span class="coun" >Chennai</span><br>
+			<span id="mastntol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="mastndh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="mastnac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="mastnrc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+	
+	<!--kancheepuram-->
+	<div class="tooltip">
+		<area shape="poly" coords="469,88,474,79,483,73,493,70,501,80,511,75,519,73,532,72,537,79,537,88,532,101,526,111,520,122,517,128,511,135,505,144,489,144,481,133,485,124,484,116,480,109,483,103,486,96,477,91">
+		<div id="kancheepuram" class="tooltiptext container">
+			<span class="coun" >Kancheepuram</span><br>
+			<span id="cjtntol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="cjtndh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="cjtnac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="cjtnrc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+	
+	<!--Vellore-->
+	<div class="tooltip">
+		<area shape="poly" coords="478,74,484,71,485,60,475,59,467,62,453,66,445,62,440,57,435,63,420,64,407,65,393,63,385,73,381,85,376,92,370,99,361,106,361,119,367,124,375,127,382,137,392,126,399,113,407,100,424,95,437,91,448,92,455,101,458,89,467,82,476,80">
+		<div id="vellore" class="tooltiptext container">
+			<span class="coun" >Vellore</span><br>
+			<span id="kpdtntol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="kpdtndh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="kpdtnac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="kpdtnrc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+	
+	<!--Tiruvannamalai-->
+	<div class="tooltip">
+		<area shape="poly" coords="473,130,482,127,484,119,480,105,485,96,476,91,466,83,458,92,456,101,445,93,436,94,425,96,414,99,404,105,399,115,395,123,390,127,384,139,383,148,389,159,399,165,409,162,425,159,437,159,439,151,438,142,438,131,439,122,453,124,464,130">
+		<div id="tiruvannamalai" class="tooltiptext container">
+			<span class="coun" >Tiruvannamalai</span><br>
+			<span id="tnmtntol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="tnmtndh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="tnmtnac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="tnmtnrc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+	
+	<!--krishnagiri-->
+	<div class="tooltip">
+		<area shape="poly" coords="381,141,367,141,356,137,341,127,336,121,329,123,321,124,310,132,306,141,303,148,295,145,280,146,279,135,286,127,287,117,285,107,295,100,304,94,307,84,318,84,329,85,337,90,344,97,353,102,358,110,363,122,369,126,375,130">
+		<div id="krishnagiri" class="tooltiptext container">
+			<span class="coun" >Krishnagiri</span><br>
+			<span id="kritntol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="kritndh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="kritnac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="kritnrc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+	
+	<!--Dharmapuri-->
+	<div class="tooltip">
+		<area shape="poly" coords="381,139,374,142,364,140,355,138,345,131,336,124,330,119,321,123,313,129,308,137,303,151,296,158,298,166,308,170,321,170,332,167,341,163,351,167,354,179,361,175,369,178,381,176,388,163,388,156,385,148">
+		<div id="dharmapuri" class="tooltiptext container">
+			<span class="coun" >Dharmapuri</span><br>
+			<span id="dpjtntol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="dpjtndh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="dpjtnac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="dpjtnrc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+	
+	<!--Vilupuram-->
+	<div class="tooltip">
+		<area shape="poly" coords="501,148,485,144,477,137,470,132,456,129,447,125,440,127,438,137,439,145,440,154,429,161,416,163,404,165,394,165,387,169,383,179,382,187,383,194,395,195,399,203,404,208,415,202,426,201,437,201,447,198,449,186,445,176,453,175,462,178,468,182,478,184,488,188,489,180,481,175,478,167,485,170,494,163">
+		<div id="vilupuram" class="tooltiptext container">
+			<span class="coun" >Vilupuram</span><br>
+			<span id="vmtntol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="vmtndh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="vmtnac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="vmtnrc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+	
+	<!--Salem-->
+	<div class="tooltip">
+		<area shape="poly" coords="296,208,299,200,300,194,292,190,292,182,292,173,295,167,305,173,316,175,326,172,336,169,346,168,352,176,353,183,364,180,374,181,381,182,380,193,388,195,395,199,398,209,395,217,382,217,379,227,368,220,365,213,366,204,359,209,348,208,341,210,327,213,318,211,312,215,304,215">
+		<div id="salem" class="tooltiptext container">
+			<span class="coun" >Salem</span><br>
+			<span id="satntol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="satndh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="satnac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="satnrc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+	
+	<!--The Nilgiris-->
+	<div class="tooltip">
+		<area shape="poly" coords="225,208,218,203,210,201,198,198,189,194,178,195,165,202,159,210,177,217,180,225,180,235,195,237,206,232,217,226,224,220">
+		<div id="nilgiris" class="tooltiptext container">
+			<span class="coun" >The Nilgiris</span><br>
+			<span id="niltntol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="niltndh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="niltnac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="niltnrc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+	
+	<!--Erode-->
+	<div class="tooltip">
+		<area shape="poly" coords="261,230,251,225,240,223,231,220,223,217,224,209,223,203,214,197,217,187,225,181,237,184,249,183,257,183,267,182,274,174,277,169,292,170,289,180,291,189,293,197,300,195,292,207,292,213,296,222,302,231,307,237,312,248,305,251,297,250,285,241,274,246,266,240">
+		<div id="erode" class="tooltiptext container">
+			<span class="coun" >Erode</span><br>
+			<span id="edtntol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="edtndh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="edtnac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="edtnrc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+	
+	<!--Namakkal-->
+	<div class="tooltip">
+		<area shape="poly" coords="294,212,294,221,302,229,307,236,312,243,320,250,328,248,338,252,346,250,354,243,358,234,365,222,364,214,362,205,355,208,339,211,328,214,317,213,305,216">
+		<div id="namakkal" class="tooltiptext container">
+			<span class="coun" >Namakkal</span><br>
+			<span id="nmkltntol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="nmkltndh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="nmkltnac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="nmkltnrc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+	
+	<!--Perambur-->
+	<div class="tooltip">
+		<area shape="poly" coords="427,224,419,220,404,211,397,215,389,218,381,224,385,235,395,240,405,243,418,246,422,237">
+		<div id="perambur" class="tooltiptext container">
+			<span class="coun" >Perambur</span><br>
+			<span id="pertntol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="pertndh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="pertnac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="pertnrc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+	
+	<!--Cuddalore-->
+	<div class="tooltip">
+		<area shape="poly" coords="485,189,474,185,464,180,456,177,448,175,446,185,447,194,440,200,429,201,419,203,406,208,411,214,421,218,430,220,442,220,452,221,458,225,463,234,462,242,470,236,478,228,485,223,486,212,485,200">
+		<div id="cuddalore" class="tooltiptext container">
+			<span class="coun" >Cuddalore</span><br>
+			<span id="cupjtntol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="cupjtndh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="cupjtnac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="cupjtnrc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+
+	<!--Ariyalur-->
+	<div class="tooltip">
+		<area shape="poly" coords="424,261,421,254,421,246,423,237,428,226,436,223,450,223,456,227,462,236,455,246,447,254,436,260">
+		<div id="ariyalur" class="tooltiptext container">
+			<span class="coun" >Ariyalur</span><br>
+			<span id="alutntol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="alutndh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="alutnac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="alutnrc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+	
+	<!--Mayiladuturai-->
+	<div class="tooltip">
+		<area shape="poly" coords="492,216,486,219,481,227,475,234,466,241,458,245,461,255,455,263,458,270,466,263,474,260,484,260,490,258,492,246,494,236,492,228">
+		<div id="mayiladuturai" class="tooltiptext container">
+			<span class="coun" >Mayiladuturai</span><br>
+			<span id="mvtntol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="mvtndh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="mvtnac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="mvtnrc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>	
+	
+	<!--Coimbatore-->
+	<div class="tooltip">
+		<area shape="poly" coords="237,223,225,223,215,228,201,237,202,246,201,255,196,261,204,263,213,269,216,282,211,291,210,306,210,318,218,325,230,320,232,302,240,295,242,287,238,275,234,266,232,253,233,245,225,237">
+		<div id="coimbatore" class="tooltiptext container">
+			<span class="coun" >Coimbatore</span><br>
+			<span id="cbetntol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="cbetndh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="cbetnac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="cbetnrc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>	
+	
+	<!--Tiruppur-->
+	<div class="tooltip">
+		<area shape="poly" coords="227,233,227,240,237,248,231,256,234,267,241,269,240,281,244,292,238,300,233,303,232,315,239,314,247,321,255,326,257,308,262,300,263,288,277,289,288,285,294,290,300,283,298,276,302,267,300,252,288,244,275,246,266,240,258,231,247,224,237,225">
+		<div id="tiruppur" class="tooltiptext container">
+			<span class="coun" >Tiruppur</span><br>
+			<span id="tuptntol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="tuptndh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="tuptnac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="tuptnrc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+	
+	<!--Karur-->
+	<div class="tooltip">
+		<area shape="poly" coords="302,254,303,262,308,272,301,276,306,284,315,290,321,284,316,277,325,276,334,274,335,288,338,294,346,279,357,281,365,278,370,273,364,266,353,263,345,264,337,258,333,252,322,248,312,249">
+		<div id="karur" class="tooltiptext container">
+			<span class="coun" >Karur</span><br>
+			<span id="krrtntol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="krrtndh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="krrtnac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="krrtnrc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+	
+	<!--Tiruchirapalli-->
+	<div class="tooltip">
+		<area shape="poly" coords="369,224,363,228,358,239,350,249,342,253,336,256,341,262,350,264,359,266,367,267,369,274,356,285,348,284,343,289,340,297,338,306,346,309,349,320,356,323,362,318,369,313,374,304,366,304,363,298,366,291,378,289,384,284,399,287,400,278,406,274,412,269,420,264,417,251,409,250,400,248,393,241,386,240,381,231,377,227">
+		<div id="tiruchirapalli" class="tooltiptext container">
+			<span class="coun" >Tiruchirapalli</span><br>
+			<span id="tpjtntol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="tpjtndh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="tpjtnac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="tpjtnrc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+	
+	<!--Thanjavur-->
+	<div class="tooltip">
+		<area shape="poly" coords="459,246,456,257,456,267,455,275,448,273,441,274,435,277,439,284,444,295,454,299,467,305,467,314,462,321,449,324,442,327,435,333,425,335,419,325,423,320,429,311,426,304,428,296,416,293,407,292,399,283,409,271,422,262,437,262,448,255">
+		<div id="thanjavur" class="tooltiptext container">
+			<span class="coun" >Thanjavur</span><br>
+			<span id="tjtntol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="tjtndh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="tjtnac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="tjtnrc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+	
+	<!--Tiruvarur-->
+	<div class="tooltip">
+		<area shape="poly" coords="467,313,473,309,475,298,479,291,476,283,479,274,481,263,476,260,464,259,460,268,454,273,445,273,437,274,438,282,441,289,450,295,458,298,464,306">
+		<div id="tiruvarur" class="tooltiptext container">
+			<span class="coun" >Tiruvarur</span><br>
+			<span id="tirtntol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="tirtndh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="tirtnac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="tirtnrc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+	
+	<!--Nagappattinam-->
+	<div class="tooltip">
+		<area shape="poly" coords="486,269,497,270,496,324,484,325,470,324,472,316,478,309,480,299,482,292,482,280">
+		<div id="nagappattinam" class="tooltiptext container">
+			<span class="coun" >Nagappattinam</span><br>
+			<span id="ngttntol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="ngttndh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="ngttnac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="ngttnrc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+	
+	<!--Dindigul-->
+	<div class="tooltip">
+		<area shape="poly" coords="334,284,333,275,324,277,317,279,315,290,308,289,301,288,295,290,286,288,278,289,264,290,262,304,260,311,257,323,251,329,249,337,257,339,268,338,281,331,288,329,294,332,291,339,293,345,302,344,320,341,328,333,335,333,338,341,344,339,350,324,346,311,339,308,337,302,335,295">
+		<div id="dindigul" class="tooltiptext container">
+			<span class="coun" >Dindigul</span><br>
+			<span id="dgtntol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="dgtndh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="dgtnac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="dgtnrc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+	
+	<!--Pudukkottai-->
+	<div class="tooltip">
+		<area shape="poly" coords="374,300,366,290,376,293,387,290,389,283,402,284,407,295,417,292,425,294,429,304,429,318,422,323,416,327,423,332,434,339,437,348,423,361,413,352,409,344,409,338,401,339,393,335,381,336,381,326,373,326,368,331,369,322,371,314,376,308,368,302">
+		<div id="pudukkottai" class="tooltiptext container">
+			<span class="coun" >Pudukkottai</span><br>
+			<span id="pdkttntol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="pdkttndh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="pdkttnac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="pdkttnrc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+	
+	<!--Theni-->
+	<div class="tooltip">
+		<area shape="poly" coords="267,392,260,393,255,388,242,387,246,373,246,360,250,352,246,343,251,337,259,339,270,338,281,331,293,334,294,348,289,360,283,372,275,381">
+		<div id="theni" class="tooltiptext container">
+			<span class="coun" >Theni</span><br>
+			<span id="thetntol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="thetndh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="thetnac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="thetnrc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+	
+	<!--Madurai-->
+	<div class="tooltip">
+		<area shape="poly" coords="274,385,282,370,287,362,291,354,294,346,313,344,325,337,334,332,335,339,341,342,347,328,352,323,359,341,361,352,357,359,346,362,335,365,333,372,325,375,322,385,299,385,292,380,284,381,280,383">
+		<div id="madurai" class="tooltiptext container">
+			<span class="coun" >Madurai</span><br>
+			<span id="mdutntol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="mdutndh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="mdutnac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="mdutnrc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+	
+	<!--Sivaganga-->
+	<div class="tooltip">
+		<area shape="poly" coords="332,372,334,365,343,363,350,360,361,353,361,344,359,336,356,328,360,321,367,321,366,328,376,327,381,336,394,333,403,338,409,346,411,356,403,359,399,367,393,365,388,360,383,372,394,377,391,388,381,390,370,391,362,387,354,381,345,378,338,372">
+		<div id="sivaganga" class="tooltiptext container">
+			<span class="coun" >Sivaganga</span><br>
+			<span id="svgatntol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="svgatndh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="svgatnac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="svgatnrc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+	
+	<!--Virudunagar-->
+	<div class="tooltip">
+		<area shape="poly" coords="354,388,346,380,337,375,327,375,325,383,313,386,297,385,284,382,275,385,270,390,263,395,256,402,262,407,274,411,290,418,297,420,302,423,302,434,307,431,311,426,315,421,322,412,335,411,346,419,351,411,342,404,345,398,350,394">
+		<div id="virudunagar" class="tooltiptext container">
+			<span class="coun" >Virudunagar</span><br>
+			<span id="vpttntol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="vpttndh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="vpttnac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="vpttnrc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+	
+	<!--Ramanathapuram-->
+	<div class="tooltip">
+		<area shape="poly" coords="450,427,443,418,437,411,428,414,419,413,408,410,401,400,402,390,408,375,417,362,407,357,398,367,392,365,386,363,382,372,395,380,392,386,380,391,364,387,354,388,347,399,341,407,353,412,347,420,344,429,351,432,379,427,393,423,407,421,415,419,422,418,431,420,438,422">
+		<div id="ramanathapuram" class="tooltiptext container">
+			<span class="coun" >Ramanathapuram</span><br>
+			<span id="rmdtntol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="rmdtndh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="rmdtnac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="rmdtnrc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+	
+	<!--Tirunelveli-->
+	<div class="tooltip">
+		<area shape="poly" coords="298,429,300,421,282,418,271,413,261,409,255,407,249,427,242,441,242,449,248,456,246,464,240,472,246,481,256,486,264,491,267,500,273,506,274,515,278,525,297,521,306,511,298,494,299,481,300,468,297,459,290,451,286,444,289,434,288,427">
+		<div id="tirunelveli" class="tooltiptext container">
+			<span class="coun" >Tirunelveli</span><br>
+			<span id="tentntol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="tentndh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="tentnac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="tentnrc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+	
+	<!--Tuticorin-->
+	<div class="tooltip">
+		<area shape="poly" coords="306,510,300,495,299,487,298,479,300,472,297,460,292,446,289,437,289,430,298,432,312,430,317,421,321,415,325,411,335,410,340,417,345,425,351,435,343,443,335,447,331,457,336,468,330,476,330,484,326,496,322,507,315,509">
+		<div id="tuticorin" class="tooltiptext container">
+			<span class="coun" >Tuticorin</span><br>
+			<span id="tntntol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="tntndh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="tntnac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="tntnrc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+	
+	<!--Kanyakumari-->
+	<div class="tooltip">
+		<area shape="poly" coords="249,484,247,491,242,496,236,505,229,508,242,519,250,524,265,528,277,529,272,513,266,501,262,492,257,486">
+		<div id="kanyakumari" class="tooltiptext container">
+			<span class="coun" >Kanyakumari</span><br>
+			<span id="capetntol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="capetndh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="capetnac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="capetnrc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+	
+</map>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="jquery.rwdImageMaps.min.js"></script>
+<script src="tnscript.js" type="text/javascript"></script>
+<script>
+$(document).ready(function(e) {
+	$('img[usemap]').rwdImageMaps();
+});
+</script>
+</body>
+</html>

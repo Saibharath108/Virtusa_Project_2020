@@ -1,0 +1,42 @@
+<style>
+*{box-sizing: border-box;padding: 0%;margin: 0%;}
+.tooltip {
+  position: relative;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  position: fixed;
+  display: block;
+  opacity: 0;
+  width: 20%;
+  height: auto;
+  background-color: white;
+  background: #EFEFF0;
+  color: black;
+  text-align: center;
+  border-radius: 6px;
+  box-shadow: 0 8px 10px rgba(0,0,0,.1);
+}
+
+.tooltip:hover .tooltiptext {
+  opacity: 1;
+  visibility: visible;
+  font-size: 1.6vw;
+}
+.coun{font-weight: bold; font-family: Times New Roman;font-size: 1.8vw;color: blue;margin: 2%;}
+.atcase{margin-left: 10%;float: left;color: #FF0000;font-weight: bold;}
+.tolcase{margin-left: 10%;float: left;color: #FF00E0;font-weight: bold;}
+.detcase{margin-left: 10%;float: left;color: orange;font-weight: bold;}
+.rcvcase{margin-left: 10%;float: left;color: #0DD100;font-weight: bold;}
+
+.map img[usemap] {
+	border: none;
+	width: auto;
+ 	height: auto;
+ 	margin-top: 2%;
+    max-width: 100%;
+}
+.place{font-family: Arial;margin-left: 2.2%;font-size: 3vw;font-weight: bold;float:left;}
+
+</style>

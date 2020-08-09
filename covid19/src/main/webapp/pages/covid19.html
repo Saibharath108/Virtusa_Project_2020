@@ -1,0 +1,473 @@
+<DOCTYPE html>
+<html>
+<title>COVID-19 DASHBOARD</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.3.1/css/flag-icon.min.css" rel="stylesheet"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="../../js/ios-orientationchange-fix.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<link rel="stylesheet" type="text/css" href="styl.css">
+</head>
+<body>
+<div class= "containe">
+    	<div id="con1" class= "logo">
+    		<img src= "https://media0.giphy.com/media/dVuyBgq2z5gVBkFtDc/giphy.gif">
+   			<h2 class= "heading1"><b>COVID19</b></h2>
+   			<h2 class= "heading2"><b>DASHBOARD</b></h2>
+   		</div>
+   	<form action="file.php">
+		<div id = "con2" class="search"><input type="text" placeholder="Search by State and District" name="search"></div>
+	</form>
+	<a href="https://www.google.com" title="Menu"><i class="fa fa-bars fa-2x"></i></a>
+	<a onclick="document.getElementById('modal-wrapper').style.display='block'" title="Login"><i class="fa fa-user fa-2x"></i></a>
+	<i class="fa fa-envelope fa-2x" title="Mail"></i>
+	<i class="fa fa-share-alt fa-2x" title="Share"></i>
+	<i class="fa fa-download fa-2x" title="Download"></i>
+	<a id="back" style="text-decoration:none;position:fixed;font-weight:bold;color:brown;text-align:right;margin:-180px;background-color:#ccc;font-size:2vw;" href="#">Back to top</a>
+</div>
+<br>
+<div class="pop">
+	<div class="pop">
+<div id="modal-wrapper" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+        
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp">&times;</span>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS8VK8S-A7kZpno7GH9I7-HpOriFtvd42h0WQ&usqp=CAU" alt="Avatar" class="avatar">
+      <h1 style="text-align:center">Profile Photo</h1>
+    </div>
+
+    <div class="container">
+      <input type="text" placeholder="Enter Username" name="uname">
+      <input type="password" placeholder="Enter Password" name="psw">        
+      <button type="submit">Login</button>
+      <input type="checkbox" style="margin:26px 30px;"> Remember me      
+      <a href="#" style="text-decoration:none; float:right; margin-right:34px; margin-top:26px;">Forgot Password ?</a>
+      <p style="margin-left:30%">Create an account<a href="#" style="text-decoration:none;text-align:center;"> Sign Up</a></p>
+    </div>
+    
+  </form>
+  
+</div>
+</div>
+</div>
+
+	<a class="place" style="text-decoration:none;color:black;" href="http://localhost:8080/home#">&#127470&#127475 INDIA</a>
+	<div class="p">
+		<div style="float:left;margin-left:2.2%">last update :</div>
+		<div style="float:left"id="time"></div>
+		<div style="float:left">,</div>
+		<div id ="date"></div>
+	</div>
+
+
+
+
+
+
+<div>
+	<div class="map" style="display:flex;justify-content:center;align-items:center">
+		<img src="indiamap.jpg" frameborder="0" usemap="#india"></div>
+</div><br>
+
+<map name="india" style="cursor:pointer">
+	<!-- Tamil Nadu -->
+	<div class="tooltip">
+		<area shape="poly" coords="221,493,238,495,246,489,244,481,254,478,263,473,275,469,288,462,289,471,286,482,280,491,281,499,283,506,281,519,274,520,269,528,266,537,258,540,252,546,250,552,242,555,235,550,236,540,238,529,237,518,228,509,223,501"
+		href="http://localhost:8080/tamilnadu" alt="">
+		<div id="tntoolti" class="tooltiptext container">
+			<span class="coun" >Tamil Nadu</span><br>
+			<span id="tntol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="tndh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="tnac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="tnrc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+
+	<!-- kerala -->
+	<div class="tooltip">
+		<area shape="poly" coords="198,477,211,486,218,494,224,506,231,513,234,522,236,536,234,551,224,536,221,522,214,512,210,501,203,492">
+		<div id="ketoolti"   class="tooltiptext container">
+			<span class="coun">Kerala</span><br>
+			<span id="ketol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="kedh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="keac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="kerc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+	
+	<!-- karnataka -->
+	<div class="tooltip">
+		<area shape="poly" coords="241,380,241,390,242,402,240,409,236,423,231,433,228,440,234,453,244,456,254,462,259,478,252,477,243,478,240,488,232,493,221,492,208,484,197,475,193,458,187,443,190,431,190,422,191,412,198,407,209,401,215,398,221,392,231,385">
+		<div id="katoolti"  class="tooltiptext container">
+			<span class="coun">Karnataka</span><br>
+			<span id="katol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="kadh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="kaac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="karc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+	
+	<!-- Andhra Pradesh -->
+	<div class="tooltip">
+		<area shape="poly" coords="363,374,360,367,347,368,338,372,333,380,326,378,310,390,305,397,297,402,287,404,280,409,267,412,257,421,247,422,236,421,233,433,233,444,241,454,250,454,257,466,263,469,273,466,285,463,287,450,284,437,291,424,305,421,311,412,320,410,322,402,334,396,344,387,356,380">
+		<div id="aptoolti"   class="tooltiptext container">
+			<span class="coun" >Adhra Pradesh</span><br>
+			<span id="aptol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="apdh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="apac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="aprc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+	
+	<!-- Telangana -->
+	<div class="tooltip">
+		<area shape="poly" coords="242,416,242,409,243,402,243,389,242,378,247,371,254,365,258,355,266,355,274,358,281,366,284,374,293,376,299,381,303,387,311,389,305,396,296,400,286,401,279,408,269,411,262,416,254,419,248,420">
+		<div id="tetoolti"   class="tooltiptext container">
+			<span class="coun">Telangana</span><br>
+			<span id="tetol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="tedh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="teac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="terc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+	
+	<!-- Maharastra -->
+	<div class="tooltip">
+		<area shape="poly" coords="180,319,180,328,175,337,161,347,162,359,164,368,167,384,170,405,175,418,185,426,189,414,206,402,218,397,229,387,236,378,248,367,254,356,270,355,282,361,285,372,290,362,293,345,291,335,292,323,281,321,268,321,259,323,250,324,241,322,233,322,228,326,219,328,204,325,193,318">
+		<div id="mhtoolti"  class="tooltiptext container">
+			<span class="coun">Maharastra</span><br>
+			<span id="mhtol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="mhdh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="mhac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="mhrc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+	
+	<!-- Goa -->
+	<div class="tooltip">
+		<area shape="poly" coords="177,426,184,428,189,436,183,439,177,434">
+		<div id="gatoolti"   class="tooltiptext container">
+			<span class="coun">Goa</span><br>
+			<span id="gatol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="gadh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="gaac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="garc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+	
+	<!-- Odisha -->
+	<div class="tooltip">
+		<area shape="poly" coords="362,364,353,366,345,366,337,372,330,375,309,387,314,380,319,371,321,358,317,348,328,350,330,343,328,334,343,326,347,317,346,307,359,302,368,307,373,314,380,313,389,305,396,310,407,315,414,318,402,324,403,338,393,346,381,355,371,358">
+		<div id="ortoolti"   class="tooltiptext container">
+			<span class="coun">Odisha</span><br>
+			<span id="ortol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="ordh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="orac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="orrc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+	
+	<!-- Andaman and Nicobar Islands-->
+	<div class="tooltip">
+		<area shape="poly" coords="506,460,500,468,497,474,496,488,493,501,495,515,504,504,505,492,508,480,511,469">
+		<div id="antoolti"   class="tooltiptext container">
+			<span class="coun">Andaman and Nicobar Islands</span><br>
+			<span id="antol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="andh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="anac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="anrc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+	
+	<!-- Chhattisgarh -->
+	<div class="tooltip">
+		<area shape="poly" coords="307,382,315,377,320,366,316,356,315,346,330,351,326,341,326,333,339,329,342,320,343,308,351,301,353,294,350,287,347,281,341,277,331,278,322,282,315,281,317,288,312,302,306,307,300,313,297,320,293,328,291,342,296,357,291,363,289,369,298,377">
+		<div id="cgtoolti"   class="tooltiptext container">
+			<span class="coun">Chhattisgarh</span><br>
+			<span id="cgtol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="cgdh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="cgac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="cgrc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+	
+	<!-- West Bengal -->
+	<div class="tooltip">
+		<area shape="poly" coords="414,319,406,315,401,309,397,299,388,296,384,290,392,286,401,281,413,271,415,263,418,256,418,249,424,244,439,251,432,254,425,260,422,270,430,274,431,284,436,291,435,298,432,310,425,314,419,307">
+		<div id="wbtoolti"   class="tooltiptext container">
+			<span class="coun">West Bengal</span><br>
+			<span id="wbtol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="wbdh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="wbac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="wbrc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+	
+	<!-- Jharkhand -->
+	<div class="tooltip">
+		<area shape="poly" coords="417,255,411,254,404,265,394,268,383,262,369,266,360,268,346,266,343,274,353,285,359,294,354,302,373,304,376,311,385,307,399,308,395,301,387,296,382,288,389,284,396,280,402,277,410,273,414,264">
+		<div id="jhtoolti"   class="tooltiptext container">
+			<span class="coun">Jharkhand</span><br>
+			<span id="jhtol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="jhdh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="jhac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="jhrc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+	
+	<!-- Bihar -->
+	<div class="tooltip">
+		<area shape="poly" coords="445,239,450,235,449,228,442,226,436,223,424,225,417,232,404,234,391,232,381,225,371,224,365,219,351,213,358,226,357,233,356,240,353,249,347,252,344,260,352,265,362,265,380,264,392,264,400,262,409,253,418,250,419,244,417,238,421,232,431,228,439,235">
+		<div id="brtoolti"   class="tooltiptext container">
+			<span class="coun">Bihar</span><br>
+			<span id="brtol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="brdh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="brac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="brrc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+	
+	<!-- Sikkim -->
+	<div class="tooltip">
+		<area shape="poly" coords="433,217,426,218,421,216,424,206,433,202,437,209">
+		<div id="sktoolti"   class="tooltiptext container">
+			<span class="coun">Sikkim</span><br>
+			<span id="sktol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="skdh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="skac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="skrc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+	
+	<!-- Meghalaya -->
+	<div class="tooltip">
+		<area shape="poly" coords="454,253,462,256,472,256,481,256,495,252,494,246,488,238,478,243,461,242,453,242">
+		<div id="mltoolti"   class="tooltiptext container">
+			<span class="coun">Meghalaya</span><br>
+			<span id="mltol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="mldh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="mlac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="mlrc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+	
+	<!-- Assam -->
+	<div class="tooltip">
+		<area shape="poly" coords="453,228,462,227,474,225,484,224,498,222,512,218,526,209,537,204,551,202,555,214,542,221,529,230,515,245,512,254,505,267,499,271,495,267,498,253,500,244,493,238,481,240,469,241,460,243,452,238">
+		<div id="astoolti" class="tooltiptext container">
+			<span class="coun">Assam</span><br>
+			<span id="astol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="asdh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="asac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="asrc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+	
+	<!-- Arunachal Pradesh -->
+	<div class="tooltip">
+		<area shape="poly" coords="501,221,492,220,486,209,493,206,504,200,517,190,527,181,541,180,551,179,560,174,561,183,568,188,564,194,570,196,581,197,576,206,575,215,562,216,554,223,546,226,546,220,556,215,555,204,546,204,530,209,521,219,513,220">
+		<div id="artoolti"   class="tooltiptext container">
+			<span class="coun">Arunachal Pradesh</span><br>
+			<span id="artol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="ardh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="arac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="arrc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+	
+	<!-- Nagaland -->
+	<div class="tooltip">
+		<area shape="poly" coords="518,249,526,248,536,248,542,239,542,233,544,224,538,224,528,229,523,236,520,243">
+		<div id="nltoolti"   class="tooltiptext container">
+			<span class="coun">Nagaland</span><br>
+			<span id="nltol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="nldh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="nlac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="nlrc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+	
+	<!-- Manipur -->
+	<div class="tooltip">
+		<area shape="poly" coords="517,251,524,246,533,251,533,267,528,276,521,278,513,276,506,271,510,261">
+		<div id="mntoolti"   class="tooltiptext container">
+			<span class="coun">Manipur</span><br>
+			<span id="mntol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="mndh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="mnac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="mnrc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+	
+	<!-- Tripura -->
+	<div class="tooltip">
+		<area shape="poly" coords="494,271,487,274,481,276,474,282,476,289,482,295,488,289,489,280">
+		<div id="trtoolti"   class="tooltiptext container">
+			<span class="coun">Tripura</span><br>
+			<span id="trtol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="trdh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="trac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="trrc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+	
+	<!-- Mizoram -->
+	<div class="tooltip">
+		<area shape="poly" coords="506,272,510,277,513,285,513,295,510,300,508,306,501,315,497,302,495,290,493,283,496,274">
+		<div id="mztoolti"   class="tooltiptext container">
+			<span class="coun">Mizoram</span><br>
+			<span id="mztol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="mzdh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="mzac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="mzrc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+	
+	<!-- Madhya Pradesh -->
+	<div class="tooltip">
+		<area shape="poly" coords="259,228,248,225,239,232,233,234,228,239,224,248,239,252,231,258,231,267,230,274,218,272,208,278,212,265,199,262,194,267,198,279,193,289,188,298,184,307,183,315,194,317,205,322,218,324,228,326,234,318,245,320,262,322,272,319,290,321,296,313,304,306,318,295,318,286,316,279,330,278,329,268,322,266,314,259,305,260,296,260,287,255,272,258,263,252,263,259,265,271,255,269,254,260,254,254,263,243,265,236">
+		<div id="mptoolti"   class="tooltiptext container">
+			<span class="coun">Madhya Pradesh</span><br>
+			<span id="mptol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="mpdh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="mpac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="mprc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+	
+	<!-- Gujarat -->
+	<div class="tooltip">
+		<area shape="poly" coords="131,267,122,274,113,275,94,275,88,287,96,292,108,297,120,293,118,305,110,307,99,309,107,318,119,329,129,330,136,335,145,331,152,320,151,305,162,305,158,313,161,323,164,337,171,338,176,332,180,323,184,299,179,289,170,279,163,273,146,266">
+		<div id="gjtoolti"   class="tooltiptext container">
+			<span class="coun">Gujarat</span><br>
+			<span id="gjtol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="gjdh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="gjac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="gjrc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+	
+	<!-- Rajasthan -->
+	<div class="tooltip">
+		<area shape="poly" coords="187,289,172,284,164,272,144,266,133,264,128,253,120,245,118,232,105,223,109,217,119,204,134,205,147,196,157,185,164,179,170,169,181,160,192,169,198,177,209,189,214,203,229,202,239,210,243,222,240,232,229,235,227,243,229,250,232,255,230,261,229,271,222,271,214,269,209,260,195,259,195,271,198,281">
+		<div id="rjtoolti"   class="tooltiptext container">
+			<span class="coun">Rajasthan</span><br>
+			<span id="rjtol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="rjdh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="rjac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="rjrc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+	
+	<!-- Uttar Pradesh -->
+	<div class="tooltip">
+		<area shape="poly" coords="245,160,237,168,234,174,239,182,244,190,243,199,239,204,237,211,251,223,266,226,268,237,263,250,273,254,287,251,296,255,309,257,326,264,334,280,345,266,343,254,353,245,354,235,354,226,351,218,344,214,334,210,322,206,309,202,297,193,288,190,280,188,270,185,260,176,253,172,248,170">
+		<div id="uptoolti"   class="tooltiptext container">
+			<span class="coun">Uttar Pradesh</span><br>
+			<span id="uptol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="updh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="upac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="uprc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+	
+	<!-- Uttarakhand -->
+	<div class="tooltip">
+		<area shape="poly" coords="258,141,264,134,273,140,282,147,288,150,298,157,296,164,290,171,288,178,283,184,271,182,262,174,251,169,246,163,244,157,249,144">
+		<div id="uktoolti"   class="tooltiptext container">
+			<span class="coun">Uttarakhand</span><br>
+			<span id="uktol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="ukdh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="ukac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="ukrc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+	
+	<!-- Delhi -->
+	<div class="tooltip">
+		<area shape="poly" coords="227,186,227,195,240,198,241,189,233,180">
+		<div id="dltoolti"  class="tooltiptext container">
+			<span class="coun">Delhi</span><br>
+			<span id="dltol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="dldh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="dlac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="dlrc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+	
+	<!-- Haryana -->
+	<div class="tooltip">
+		<area shape="poly" coords="239,156,231,154,225,162,213,167,200,170,190,164,190,171,198,177,205,181,209,187,213,196,218,203,227,199,236,204,225,189,228,180,233,175,233,167">
+		<div id="hrtoolti"   class="tooltiptext container">
+			<span class="coun">Haryana</span><br>
+			<span id="hrtol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="hrdh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="hrac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="hrrc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+	
+	<!-- Punjab -->
+	<div class="tooltip">
+		<area shape="poly" coords="208,118,197,124,193,128,191,135,187,143,185,151,180,156,184,165,198,166,218,166,226,158,228,149,222,143,214,128,218,138">
+		<div id="pbtoolti"   class="tooltiptext container">
+			<span class="coun">Punjab</span><br>
+			<span id="pbtol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="pbdh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="pbac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="pbrc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+	
+	<!-- Himachal Pradesh -->
+	<div class="tooltip">
+		<area shape="poly" coords="262,131,262,125,254,118,244,112,235,106,225,105,217,106,213,112,209,120,212,126,221,138,227,145,233,150,243,155,247,141,260,137">
+		<div id="hbtoolti"  class="tooltiptext container">
+			<span class="coun">Himachal Pradesh</span><br>
+			<span id="hbtol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="hbdh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="hbac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="hbrc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div>
+	</div>
+	
+	<!-- Jammu and Kashmir -->
+	<div class="tooltip">
+		<area shape="poly" coords="211,109,197,113,182,104,173,94,174,71,183,62,174,49,161,43,168,29,180,26,189,24,203,19,210,24,217,29,224,36,231,46,238,52,252,52,259,49,270,45,284,52,288,61,281,74,273,81,269,98,277,106,269,113,260,112,252,113,245,111,234,104,223,101">
+		<div id="jktoolti"  class="tooltiptext container">
+			<span class="coun">Jammu and Kashmir</span><br>
+			<span id="jktol" class="tolcase"></span><span style="font-family:Times New Roman">Total Cases</span><br>
+			<span id="jkdh" class="detcase"></span><span style="font-family:Times New Roman">Death Cases</span><br>
+			<span id="jkac" class="atcase"></span><span style="font-family:Times New Roman">Active Cases</span><br>
+			<span id="jkrc" class="rcvcase"></span><span style="font-family:Times New Roman">Recovery Cases</span>
+		</div></div>
+</map>
+
+
+<br><br><br><br>
+<div class="msg">
+<p style="margin-left:3%">In</p><p style="margin-left:0.5%;color:#2254A7;font-weight: bold;">India</p><p style="margin-left:0.5%;">, from</p><p style="margin-left:0.5%;color:#2254A7;font-weight: bold;"> Jan 30</p><p style="margin-left:0.5%;">to</p><p style="margin-left:0.5%;color:#2254A7;font-weight: bold;" id="tim"></p><p>,</p><p style="margin-left:0.5%;color:#2254A7;font-weight: bold;" id="date1"></p><p>, there have been</p><p style="margin-left:0.5%;color:#2254A7;font-weight: bold;" id="total_case"></p><p style="margin-left:0.5%"> confirmed cases of COVID-19 with </p><p style="margin-left:0.5%;color:#2254A7;font-weight: bold;" id="death"></p><p style="margin-left:0.5%"> deaths.</p>
+</div>
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>.............
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="jquery.rwdImageMaps.min.js"></script>
+<script src="scrip.js" type="text/javascript"></script>
+<script>
+$(document).ready(function(e) {
+	$('img[usemap]').rwdImageMaps();
+});
+</script>
+</body>
+</html>
